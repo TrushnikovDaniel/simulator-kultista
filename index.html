@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -5,6 +6,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Симулятор культиста - НРИ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem;
+        }
+        nav a:hover {
+            background-color: #4a6b8a;
+            border-radius: 4px;
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 1200px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .statistics-img {
+            display: block;
+            margin: 2rem auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+        .review-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .review-card a {
+            display: block;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            padding: 0.5rem;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .review-card a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,25 +112,83 @@
     </nav>
     
     <section id="description">
-        <h2>Описание НРИ</h2>
-        <p>"Симулятор культиста" — это настольная ролевая игра, вдохновлённая одноимённой компьютерной игрой, разработанной студией Weather Factory. Игра погружает вас в мир лавкрафтовских ужасов, где вы играете роль оккультиста, стремящегося раскрыть тайны неизведанного и создать свой собственный культ.</p>
-        
-        <h3>Сюжет и лор</h3>
-        <p>Игра происходит в альтернативной Англии 1920-х годов, где вы начинаете как обычный человек с склонностью к оккультизму. Ваш персонаж будет исследовать запретные знания, взаимодействовать с потусторонними сущностями и создавать секту последователей. Сюжет разворачивается через нарративные события и выборы, которые влияют на развитие вашей истории.</p>
-        
-        <h3>Механики игры</h3>
-        <p>Основа: Игра построена на нарративных принципах, где ваши действия и решения формируют повествование. Ваши нарративные права будут расширяться и уменьшаться в зависимости от ситуации, позволяя вам влиять на историю в разной степени. Повествование не привязано к конкретному времени суток, что позволяет вам переключаться между утренними и вечерними ситуациями в любой момент.</p>
-        <p>Исследования: Собирайте древние тексты, артефакты и проводите ритуалы, чтобы раскрыть тайны мира и продвигаться вперёд.</p>
-        <p>Карты и действия: Используйте карты для представления действий, объектов и сущностей. Перетаскивайте их на различные ячейки, чтобы выполнить действия, такие как работа, чтение книг или проведение ритуалов.</p>
-        <p>Ресурсы: Управляйте своими ресурсами — здоровьем, разумом, воображением и деньгами — чтобы поддерживать свой культ и расширять свои знания.</p>
-    </section>
+    <h2>Описание НРИ</h2>
+    <p>"Симулятор культиста" — это настольная ролевая игра, вдохновлённая одноимённой компьютерной игрой, разработанной студией <a href="https://weatherfactory.biz">Weather Factory</a>. Игра погружает вас в мир лавкрафтовских ужасов, где вы играете роль оккультиста, стремящегося раскрыть тайны неизведанного и создать свой собственный культ. Вы можете ознакомиться с компьютерной версией игры на <a href="https://store.steampowered.com/app/718670/Cultist_Simulator/?l=russian">Steam</a>.</p>
+    
+    <h3>Сюжет и лор</h3>
+    <p>Игра происходит в альтернативной Англии 1920-х годов, где вы начинаете как обычный человек с склонностью к оккультизму. Ваш персонаж будет исследовать запретные знания, взаимодействовать с потусторонними сущностями и создавать секту последователей. Сюжет разворачивается через нарративные события и выборы, которые влияют на развитие вашей истории.</p>
+    
+    <h3>Лор игры</h3>
+    <p><strong>Место действия</strong>: Альтернативная Англия 1920-х годов.</p>
+    <p><strong>Сюжет</strong>: Игроки начинают как обычные граждане, которые постепенно погружаются в мир мистики и магии, изучая древние ритуалы и привлекая последователей для создания своей секты.</p>
+    <p><strong>Взаимодействия</strong>: Игроки взаимодействуют с различными персонажами, такими как менторы, продавцы, детективы и журналисты, каждый из которых может влиять на ход игры.</p>
+    <p><strong>Цель</strong>: Расширить власть своего культа и достичь божественного просветления, избегая внимания правоохранительных органов и конкуренции со стороны других культов.</p>
+    
+    <h3>Механики игры</h3>
+    <p>Основа: Игра построена на нарративных принципах, где ваши действия и решения формируют повествование. Ваши нарративные права будут расширяться и уменьшаться в зависимости от ситуации, позволяя вам влиять на историю в разной степени. Повествование не привязано к конкретному времени суток, что позволяет вам переключаться между утренними и вечерними ситуациями в любой момент.</p>
+    <p>Исследования: Собирайте древние тексты, артефакты и проводите ритуалы, чтобы раскрыть тайны мира и продвигаться вперёд.</p>
+    <p>Карты и действия: Используйте карты для представления действий, объектов и сущностей. Перетаскивайте их на различные ячейки, чтобы выполнить действия, такие как работа, чтение книг или проведение ритуалов.</p>
+    <p>Ресурсы: Управляйте своими ресурсами — здоровьем, разумом, воображением и деньгами — чтобы поддерживать свой культ и расширять свои знания.</p>
+</section>
     
     <section id="statistics">
-        <h2>Статистика сессий</h2>
         <p>Ниже представлена статистика проведенных игровых сессий:</p>
-        <img src="images/statistics.jpg" alt="Статистика игр" style="width: 1000px; height: 600px;">
-    </section>
+<section id="statistics">
+    <h2>Статистика сессий</h2>
     
+    <table style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
+        <thead>
+            <tr>
+                <th style="border: 1px solid #ddd; padding: 10px;">Дата</th>
+                <th style="border: 1px solid #ddd; padding: 10px;">Время</th>
+                <th style="border: 1px solid #ddd; padding: 10px;">Количество игроков</th>
+                <th style="border: 1px solid #ddd; padding: 10px;">Продолжительность</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px;">11.04.2025</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">11:00-15:00</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">2</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">4 часа</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px;">11.04.2025</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">17:00-21:00</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">2</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">4 часа</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px;">12.04.2025</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">11:00-15:00</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">3</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">4 часа</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px;">12.04.2025</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">17:00-19:00</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">2</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">2 часа</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px;">13.04.2025</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">17:30-19:00</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">2</td>
+                <td style="border: 1px solid #ddd; padding: 10px;">1,5 часа</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3>Общая статистика</h3>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+        <li><strong>Среднее количество игроков:</strong> 2,2 человека</li>
+        <li><strong>Средняя продолжительность игры:</strong> 3,1 часа</li>
+        <li><strong>Среднее количество игр в день:</strong> 1,67 игры</li>
+        <li><strong>Общее количество игроков за период:</strong> 11 человек</li>
+        <li><strong>Общее количество игр:</strong> 5 сессий</li>
+    </ul>
+</section>
+
     <section id="reviews">
         <h2>Отзывы игроков</h2>
         <div class="reviews">
@@ -59,7 +210,12 @@
             <div class="review-card">
                 <h3>Отзыв 4</h3>
                 <p>Отзыв от игрока который, поиграл первый раз</p>
-                <a href="https://discord.com/channels/871036460436951100/1138192225340235776/1360701920297226312" target="_blank">Читать отзыв</a>
+                <a href=https://discord.com/channels/871036460436951100/1138192225340235776/1360701920297226312" target="_blank">Читать отзыв</a>
+            </div>
+            <div class="review-card">
+                <h3>Отзыв 5</h3>
+                <p>Игрок с самой короткой сессии</p>
+                <a href="https://discord.com/channels/871036460436951100/1138192225340235776/1360589818773373178" target="_blank">Читать отзыв</a>
             </div>
         </div>
     </section>
@@ -67,5 +223,8 @@
     <footer>
         <p>&copy; 2025 Симулятор культиста. Все права защищены.</p>
     </footer>
+
+<div style="text-align: center; margin: 20px;">
+</div>
 </body>
 </html>
